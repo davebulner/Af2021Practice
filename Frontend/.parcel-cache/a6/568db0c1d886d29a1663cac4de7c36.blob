@@ -1,0 +1,151 @@
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class Navbar extends _react.Component {
+    constructor(props){
+        super(props);
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 10
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("nav", {
+            className: "navbar navbar-expand-lg navbar-light bg-light",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 11
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container-fluid",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 12
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+            className: "navbar-brand",
+            href: "#",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 13
+            },
+            __self: this
+        }, "2021 practice"), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            className: "navbar-toggler",
+            type: "button",
+            "data-bs-toggle": "collapse",
+            "data-bs-target": "#navbarNav",
+            "aria-controls": "navbarNav",
+            "aria-expanded": "false",
+            "aria-label": "Toggle navigation",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 14
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "navbar-toggler-icon",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 15
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "collapse navbar-collapse",
+            id: "navbarNav",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 17
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+            className: "navbar-nav",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 18
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 19
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+            className: "nav-link active",
+            "aria-current": "page",
+            href: "#",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 20
+            },
+            __self: this
+        }, "Home")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 22
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+            className: "nav-link",
+            href: "#",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 23
+            },
+            __self: this
+        }, "Features")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 25
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+            className: "nav-link",
+            href: "#",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 26
+            },
+            __self: this
+        }, "Pricing")), /*#__PURE__*/ _reactDefault.default.createElement("li", {
+            className: "nav-item",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 28
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+            className: "nav-link disabled",
+            href: "#",
+            tabindex: "-1",
+            "aria-disabled": "true",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\navBar\\navBar.js",
+                lineNumber: 29
+            },
+            __self: this
+        }, "Disabled"))))))));
+    }
+}
+exports.default = Navbar;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

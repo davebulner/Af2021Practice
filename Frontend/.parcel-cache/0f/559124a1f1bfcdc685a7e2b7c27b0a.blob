@@ -1,0 +1,132 @@
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class CreateCategory extends _react.Component {
+    constructor(props){
+        super(props);
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 11
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 12
+            },
+            __self: this
+        }, "Add Category"), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 13
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "mb-3",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 14
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            for: "exampleInputEmail1",
+            className: "form-label",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 15
+            },
+            __self: this
+        }, "Email address"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "email",
+            className: "form-control",
+            id: "exampleInputEmail1",
+            "aria-describedby": "emailHelp",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 16
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            id: "emailHelp",
+            className: "form-text",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 17
+            },
+            __self: this
+        }, "We'll never share your email with anyone else.")), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "mb-3",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 19
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            for: "exampleInputPassword1",
+            className: "form-label",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 20
+            },
+            __self: this
+        }, "Password"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "password",
+            className: "form-control",
+            id: "exampleInputPassword1",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 21
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "mb-3 form-check",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 23
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "checkbox",
+            className: "form-check-input",
+            id: "exampleCheck1",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 24
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            className: "form-check-label",
+            for: "exampleCheck1",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 25
+            },
+            __self: this
+        }, "Check me out")), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "submit",
+            className: "btn btn-primary",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 27
+            },
+            __self: this
+        }, "Submit"))));
+    }
+}
+exports.default = CreateCategory;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

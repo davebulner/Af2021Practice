@@ -1,0 +1,46 @@
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+class Vehicles extends _react.Component {
+    constructor(props){
+        super(props);
+    }
+    componentDidMount() {
+        _axiosDefault.default.get(`http://localhost:5000/api/category/${this.props.match.params.id}`).then((response)=>{
+            console.log('data', response.data);
+        }).catch((error)=>{
+            alert(error.message);
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\category\\vehicles.js",
+                lineNumber: 22
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\category\\vehicles.js",
+                lineNumber: 24
+            },
+            __self: this
+        }, "category vehicles")));
+    }
+}
+exports.default = Vehicles;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

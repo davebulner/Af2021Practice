@@ -1,0 +1,117 @@
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const initialState = {
+    type: '',
+    amount: 0
+};
+class CreateCategory extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = initialState;
+        this.onChange = this.onChange.bind(this);
+    }
+    onChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 21
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 22
+            },
+            __self: this
+        }, "Add Category"), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 23
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "mb-3",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 24
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            for: "categoryType",
+            className: "form-label",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 25
+            },
+            __self: this
+        }, "Category Type"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            className: "form-control",
+            id: "categoryType",
+            name: "categoryType",
+            value: this.state.type,
+            onChange: this.onChange,
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 26
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "mb-3",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 34
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            for: "amount",
+            className: "form-label",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 35
+            },
+            __self: this
+        }, "Amount"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            className: "form-control",
+            id: "amount",
+            name: "amount",
+            value: this.state.amount,
+            onChange: this.onChange,
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 36
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "submit",
+            className: "btn btn-primary",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 44
+            },
+            __self: this
+        }, "Submit"))));
+    }
+}
+exports.default = CreateCategory;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

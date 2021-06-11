@@ -1,0 +1,85 @@
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+class Vehicles extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            vehicles: []
+        };
+    }
+    componentDidMount() {
+        _axiosDefault.default.get(`http://localhost:5000/api/category/${this.props.match.params.id}`).then((response)=>{
+            this.setState({
+                vehicles: response.data.data
+            });
+        }).catch((error)=>{
+            alert(error.message);
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\category\\vehicles.js",
+                lineNumber: 25
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\category\\vehicles.js",
+                lineNumber: 27
+            },
+            __self: this
+        }, "category vehicles"), this.state.vehicles.length > 0 && this.state.vehicles.map((item, index)=>/*#__PURE__*/ _reactDefault.default.createElement("div", {
+                key: index,
+                className: "card text-dark bg-info mb-3",
+                __source: {
+                    fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\category\\vehicles.js",
+                    lineNumber: 29
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+                __source: {
+                    fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\category\\vehicles.js",
+                    lineNumber: 30
+                },
+                __self: this
+            }, "Vehicle Code: ", item.name), /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+                __source: {
+                    fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\category\\vehicles.js",
+                    lineNumber: 31
+                },
+                __self: this
+            }, "Vehicle Model: ", item.model), /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+                __source: {
+                    fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\category\\vehicles.js",
+                    lineNumber: 32
+                },
+                __self: this
+            }, "Vehicle Type: ", item.type), /*#__PURE__*/ _reactDefault.default.createElement("h5", {
+                __source: {
+                    fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\category\\vehicles.js",
+                    lineNumber: 33
+                },
+                __self: this
+            }, "Vehicle Name: ", item.name))
+        )));
+    }
+}
+exports.default = Vehicles;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

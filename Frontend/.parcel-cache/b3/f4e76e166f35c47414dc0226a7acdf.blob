@@ -1,0 +1,152 @@
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _reactSelect = require("react-select");
+var _reactSelectDefault = parcelHelpers.interopDefault(_reactSelect);
+const initialState = {
+    type: '',
+    model: 0,
+    vehicle: []
+};
+class CreateCategory extends _react.Component {
+    constructor(props){
+        super(props);
+        this.state = initialState;
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+    componentDidMount() {
+        _axiosDefault.default.get('http://localhost:5000/api/vehicle/').then((response)=>{
+            this.setState({
+                vehicles: response.data
+            }, ()=>{
+                console.log('vehicles', this.state.vehicles);
+            });
+        });
+    }
+    onChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+    onSubmit(e) {
+        e.preventDefault();
+        let category = {
+            type: this.state.categoryType,
+            amount: this.state.amount
+        };
+        console.log('Data to send', category);
+        _axiosDefault.default.post('http://localhost:5000/api/category/createCategory', category).then((response)=>{
+            alert('Category inserted sucessfully');
+        }).catch((error)=>{
+            console.log(error.message);
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "container",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 51
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 52
+            },
+            __self: this
+        }, "Add Category"), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            onSubmit: this.onSubmit,
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 53
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "mb-3",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 54
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            for: "categoryType",
+            className: "form-label",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 55
+            },
+            __self: this
+        }, "Category Type"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            className: "form-control",
+            id: "categoryType",
+            name: "categoryType",
+            value: this.state.categoryType,
+            onChange: this.onChange,
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 56
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "mb-3",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 64
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            for: "amount",
+            className: "form-label",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 65
+            },
+            __self: this
+        }, "Amount"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            className: "form-control",
+            id: "amount",
+            name: "amount",
+            value: this.state.amount,
+            onChange: this.onChange,
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 66
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_reactSelectDefault.default, {
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 74
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            type: "submit",
+            className: "btn btn-primary",
+            __source: {
+                fileName: "D:\\2021_Af_practice\\Frontend\\src\\components\\createCategories\\createCategory.js",
+                lineNumber: 78
+            },
+            __self: this
+        }, "Submit"))));
+    }
+}
+exports.default = CreateCategory;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

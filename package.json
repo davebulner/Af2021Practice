@@ -1,0 +1,19 @@
+{
+  "name": "2021_af_practice",
+  "version": "1.0.0",
+  "description": "2021 aplication framework practical",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon Backend/server"
+  },
+  "author": "dave bulner",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.13",
+    "nodemon": "^2.0.7"
+  }
+}
